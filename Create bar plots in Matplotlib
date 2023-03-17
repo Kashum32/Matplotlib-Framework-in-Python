@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate sample data
+x = np.arange(5)
+y = np.random.randint(1,10, size=5)
+
+# Create a bar plot
+plt.bar(x,y, width=0.5, color='red')
+
+# Add axis labels and a title
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.title('Bar Plot Example')
+
+plt.show()
+
+
