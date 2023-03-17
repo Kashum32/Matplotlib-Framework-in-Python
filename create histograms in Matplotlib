@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate sample data
+data = np.random.random(1000)
+
+# Create a histogram
+plt.hist(data,  bins=100, color='red')
+
+# Add axis labels and a title
+plt.xlabel('Values')
+plt.ylabel('Frequency')
+plt.title('Histogram Example')
+
+plt.show()
+
+
+
