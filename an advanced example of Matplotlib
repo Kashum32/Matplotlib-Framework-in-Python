@@ -1,0 +1,47 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate some sample data
+x = np.linspace(0, 10, 1000)
+y = np.sin(x)
+
+# Create a figure and axis object
+fig,ax = plt.subplots()
+
+# Plot the data
+ax.plot(x, y, label='Sin(x)')
+
+# Customize the plot
+ax.set_xlim(0,10)
+ax.set_ylim(-1.2, 1.2)
+
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+ax.set_title('Sin(x) plot')
+
+ax.legend()
+
+# Add annotations
+ax.annotate('Max Value', xy=(np.pi/2,1), xytext=(3,0.5),
+            arrowprops=dict(facecolor='black',shrink=2))
+ax.annotate('Min Value', xy=(3*np.pi/2,-1), xytext=(6,-0.5),
+            arrowprops=dict(facecolor='black',shrink=2))
+
+# Add a grid
+ax.grid(True)
+
+# Add a second axis object
+ax2 = ax.twinx()
+
+# Plot a second data series on the second axis
+y2 = np.cos(x)
+ax2.plot(x, y2, label='Cos(x)', color='red')
+
+# Customize the second axis
+ax2.set_ylim(-1.2, 1.2)
+ax2.set_ylabel('Y2')
+ax2.legend(loc='lower left')
+
+plt.show()
+
+
