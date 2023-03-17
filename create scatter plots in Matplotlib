@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate sample data
+x = np.random.randn(100)
+y = np.random.randn(100)
+
+# Create a scatter plot
+plt.scatter(x,y, s=50, marker='^', c='green')
+
+# Add axis labels and a title
+plt.xlabel('Height(cm)')
+plt.ylabel('Weight(kg)')
+plt.title('Weight vs Height')
