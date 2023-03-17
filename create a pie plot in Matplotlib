@@ -1,0 +1,29 @@
+#we conducted a survey of people's favorite fruits and received the following results:
+
+Apples: 40%
+Bananas: 30%
+Oranges: 20%
+Other: 10% using matplotlib
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate The Data
+labels = ['Apples', 'Bananas', 'Orange', 'Other']
+sizes = [40, 30, 20, 10]
+
+# crate a pie chart
+plt.pie(sizes, labels=labels, startangle=90, autopct='%.1f%%') # autopct - (to show the percentages on each slice)
+                                                               # startangle (to set the starting angle of the chart).
+
+# Add title
+plt.title('Favorite Fruits')
+
+# Show plot
+plt.show() # to display the pie chart in a new window
+
+
